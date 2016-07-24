@@ -1,0 +1,8 @@
+<map id="RSL_core::HWManager::createGPIOResource" name="RSL_core::HWManager::createGPIOResource">
+<area shape="rect" id="node2" href="$class_r_s_l__core_1_1_h_w_manager.html#ac7d745eeb225e64158a0daec532414e2" title="RSL_core::HWManager\l::getInstance" alt="" coords="215,51,376,93"/>
+<area shape="rect" id="node5" href="$class_r_s_l_1_1_joystick_digital.html#ae96e3543b1ff91aa6c864a55935161bc" title="RSL::JoystickDigital\l::initialize" alt="" coords="428,107,571,149"/>
+<area shape="rect" id="node6" href="$class_r_s_l_1_1_switch.html#af4de6d2a499c6e37a461c9aef9afede5" title="RSL::Switch::initialize" alt="" coords="424,173,575,200"/>
+<area shape="rect" id="node3" href="$class_r_s_l_1_1_l_e_d.html#a78d446e44eda8060ecb270cd52206c2b" title="RSL::LED::LED" alt="" coords="441,5,557,32"/>
+<area shape="rect" id="node4" href="$class_r_s_l_1_1_servo.html#afd51c3aea9dadc4ea1976b5ecf412be9" title="RSL::Servo::Servo" alt="" coords="433,56,565,83"/>
+<area shape="rect" id="node7" href="$class_r_s_l_1_1_joystick_digital.html#a5672b018bb5d042b1397843fd35e0994" title="RSL::JoystickDigital\l::initialize" alt="" coords="623,166,765,207"/>
+</map>

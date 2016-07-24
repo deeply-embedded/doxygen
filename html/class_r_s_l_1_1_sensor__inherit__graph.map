@@ -1,0 +1,5 @@
+<map id="RSL::Sensor" name="RSL::Sensor">
+<area shape="rect" id="node3" href="$class_r_s_l_1_1_joystick_digital.html" title="RSL::JoystickDigital" alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$class_r_s_l_1_1_switch.html" title="RSL::Switch" alt="" coords="173,155,269,181"/>
+<area shape="rect" id="node2" href="$class_r_s_l_1_1_periphery.html" title="RSL::Periphery" alt="" coords="93,5,204,32"/>
+</map>
