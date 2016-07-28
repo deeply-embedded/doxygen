@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.1</span>
+   &#160;<span id="projectnumber">v1.4</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> Hardware-Ressourcen zur Verfuegung zu stellen.  
+ <a href="class_r_s_l__core_1_1_h_w_manager.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_h_w_manager_8h_source.html">HWManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -115,7 +118,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <tr class="memitem:ac7d745eeb225e64158a0daec532414e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_r_s_l__core_1_1_h_w_manager.html">HWManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_s_l__core_1_1_h_w_manager.html#ac7d745eeb225e64158a0daec532414e2">getInstance</a> ()</td></tr>
 <tr class="separator:ac7d745eeb225e64158a0daec532414e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> Hardware-Ressourcen zur Verfuegung zu stellen. </p>
+</div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a class="anchor" id="a1c843cc7c192faebed3b0f451a338bd2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -131,11 +136,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div><div class="memdoc">
 <p>GPIOpin wird neu eingefuegt </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GPIOpin</td><td>wird eingegeben </td></tr>
+    <tr><td class="paramname">pin</td><td>wird eingegeben </td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    pinsInUse.insert((<span class="keywordtype">int</span>)pin);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
@@ -183,8 +188,12 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd>unique_ptr&lt;GPIO&gt; resource </dd></dl>
-
+<dl class="section return"><dt>Rückgabe</dt><dd></dd></dl>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::unique_ptr&lt;GPIO&gt; resource = NULL;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (pinsInUse.count((<span class="keywordtype">int</span>)pin) == 0) {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> (type==<a class="code" href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">RSL::DIGITAL</a>) {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            resource = std::unique_ptr&lt;RSL::GPIO_Digital&gt;(<span class="keyword">new</span> <a class="code" href="class_r_s_l_1_1_g_p_i_o___digital.html">RSL::GPIO_Digital</a>(pin));</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type==<a class="code" href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">RSL::PWM</a>) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            resource = std::unique_ptr&lt;RSL::GPIO_PWM&gt;(<span class="keyword">new</span> <a class="code" href="class_r_s_l_1_1_g_p_i_o___p_w_m.html">RSL::GPIO_PWM</a>(pin));</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (resource != NULL) {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        resource-&gt;initialize();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> resource;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="namespace_r_s_l_html_aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f"><div class="ttname"><a href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">RSL::PWM</a></div><div class="ttdoc">PWM. </div><div class="ttdef"><b>Definition:</b> GPIO.h:101</div></div>
+<div class="ttc" id="namespace_r_s_l_html_aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d"><div class="ttname"><a href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">RSL::DIGITAL</a></div><div class="ttdoc">Digital. </div><div class="ttdef"><b>Definition:</b> GPIO.h:100</div></div>
+<div class="ttc" id="class_r_s_l_1_1_g_p_i_o___digital_html"><div class="ttname"><a href="class_r_s_l_1_1_g_p_i_o___digital.html">RSL::GPIO_Digital</a></div><div class="ttdoc">GPIO Digital Klasse fuer Input und Output Digitalsignal an einen Pin. </div><div class="ttdef"><b>Definition:</b> GPIO_Digital.h:11</div></div>
+<div class="ttc" id="class_r_s_l_1_1_g_p_i_o___p_w_m_html"><div class="ttname"><a href="class_r_s_l_1_1_g_p_i_o___p_w_m.html">RSL::GPIO_PWM</a></div><div class="ttdoc">Eine Klasse zur Kontrolle PWM Output. </div><div class="ttdef"><b>Definition:</b> GPIO_PWM.h:14</div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
@@ -225,15 +234,15 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html">GPIO</a> (Hilfs)Quelle wird erzeugt </p><dl class="params"><dt>Parameter</dt><dd>
+<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> (Hilfs)Quelle wird erzeugt </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>(Digital oder PWM) </td></tr>
     <tr><td class="paramname">pins</td><td>werden eingegeben </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd>unique_ptr&lt;GPIO&gt; resource </dd></dl>
-
+<dl class="section return"><dt>Rückgabe</dt><dd></dd></dl>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::unique_ptr&lt;GPIO&gt; resource = NULL;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> allPinsFree = <span class="keyword">true</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p : pins) {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (pinsInUse.count((<span class="keywordtype">int</span>)p) &gt; 0) {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            allPinsFree = <span class="keyword">false</span>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (allPinsFree) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// add new GPIOs here</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (resource != NULL) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        resource-&gt;initialize();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> resource;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a77baec80f21fdb9e60eebcc97fce8875"></a>
@@ -255,7 +264,7 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    pinsInUse.erase((<span class="keywordtype">int</span>)pin);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
@@ -294,7 +303,7 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 </table>
 </div><div class="memdoc">
 <p>Singleton von Hardware-Manager </p>
-
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">static</span> HWManager instance; <span class="comment">// Guaranteed to be destroyed.</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                  <span class="comment">// Instantiated on first use.</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> instance;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        };</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">

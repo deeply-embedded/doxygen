@@ -1,9 +1,9 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$class_r_s_l_1_1_periphery.html" title="RSL::Periphery" alt="" coords="5,81,116,108"/>
-<area shape="rect" id="node2" href="$class_r_s_l_1_1_actor.html" title="RSL::Actor" alt="" coords="169,56,256,83"/>
-<area shape="rect" id="node5" href="$class_r_s_l_1_1_sensor.html" title="RSL::Sensor" alt="" coords="164,107,261,133"/>
-<area shape="rect" id="node3" href="$class_r_s_l_1_1_l_e_d.html" title="RSL::LED" alt="" coords="339,5,422,32"/>
-<area shape="rect" id="node4" href="$class_r_s_l_1_1_servo.html" title="RSL::Servo" alt="" coords="335,56,426,83"/>
-<area shape="rect" id="node6" href="$class_r_s_l_1_1_joystick_digital.html" title="RSL::JoystickDigital" alt="" coords="309,107,452,133"/>
-<area shape="rect" id="node7" href="$class_r_s_l_1_1_switch.html" title="RSL::Switch" alt="" coords="333,157,429,184"/>
+<area shape="rect" id="node1" href="$class_r_s_l_1_1_periphery.html" title="Zuweisung GPIO Resource auf Periphery. " alt="" coords="5,81,116,108"/>
+<area shape="rect" id="node2" href="$class_r_s_l_1_1_actor.html" title="Klasse Actor, sie ist die Basisklasse aller Akteure. " alt="" coords="169,56,256,83"/>
+<area shape="rect" id="node5" href="$class_r_s_l_1_1_sensor.html" title="Eine Klasse zu lesen Sensordaten. " alt="" coords="164,107,261,133"/>
+<area shape="rect" id="node3" href="$class_r_s_l_1_1_l_e_d.html" title="Konstruktor für die LED, die angegebene Pins werden registriert. " alt="" coords="339,5,422,32"/>
+<area shape="rect" id="node4" href="$class_r_s_l_1_1_servo.html" title="Eine Klasse um Servos anzusteuern. " alt="" coords="335,56,426,83"/>
+<area shape="rect" id="node6" href="$class_r_s_l_1_1_joystick_digital.html" title="KY&#45;023 Joystick Modul (XY&#45;Achsen) X und Y Position des Joysticks, werden als analoge Spannung auf den..." alt="" coords="309,107,452,133"/>
+<area shape="rect" id="node7" href="$class_r_s_l_1_1_switch.html" title="Konstruktor für ein einpoliges Switch, die angegebene Pins werden registriert. " alt="" coords="333,157,429,184"/>
 </map>

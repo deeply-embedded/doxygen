@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.1</span>
+   &#160;<span id="projectnumber">v1.4</span>
    </div>
   </td>
  </tr>
@@ -96,14 +96,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div><!--header-->
 <div class="contents">
 
+<p>Eine Klasse um Servos anzusteuern.  
+ <a href="class_r_s_l_1_1_servo.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="servo_8h_source.html">servo.h</a>&gt;</code></p>
 <div class="dynheader">
 Klassendiagramm für RSL::Servo:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_r_s_l_1_1_servo__inherit__graph.png" border="0" usemap="#_r_s_l_1_1_servo_inherit__map" alt="Inheritance graph"/></div>
 <map name="_r_s_l_1_1_servo_inherit__map" id="_r_s_l_1_1_servo_inherit__map">
-<area shape="rect" id="node2" href="class_r_s_l_1_1_actor.html" title="RSL::Actor" alt="" coords="17,80,104,107"/>
-<area shape="rect" id="node3" href="class_r_s_l_1_1_periphery.html" title="RSL::Periphery" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="class_r_s_l_1_1_actor.html" title="Klasse Actor, sie ist die Basisklasse aller Akteure. " alt="" coords="17,80,104,107"/>
+<area shape="rect" id="node3" href="class_r_s_l_1_1_periphery.html" title="Zuweisung GPIO Resource auf Periphery. " alt="" coords="5,5,116,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 <table class="memberdecls">
@@ -134,7 +137,9 @@ Klassendiagramm für RSL::Servo:</div>
 <tr class="memitem:aacb4238e81f71d53f47a2ccacd69acef inherit pub_methods_class_r_s_l_1_1_periphery"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html">RSL_core::GPIO</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_s_l_1_1_periphery.html#aacb4238e81f71d53f47a2ccacd69acef">getGPIOResource</a> (<a class="el" href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6">GPIOType</a> type, <a class="el" href="namespace_r_s_l.html#a00e6d1cde3fded55d1b342398029fd08">GPIOPin</a> &amp;pin)</td></tr>
 <tr class="separator:aacb4238e81f71d53f47a2ccacd69acef inherit pub_methods_class_r_s_l_1_1_periphery"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Eine Klasse um Servos anzusteuern. </p>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a class="anchor" id="afd51c3aea9dadc4ea1976b5ecf412be9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +159,9 @@ Klassendiagramm für RSL::Servo:</div>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    currentPosition = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;servoPin = move(unique_ptr&lt;GPIO_PWM&gt;(static_cast&lt;GPIO_PWM*&gt;(<a class="code" href="class_r_s_l__core_1_1_h_w_manager.html#ac7d745eeb225e64158a0daec532414e2">HWManager::getInstance</a>().createGPIOResource(<a class="code" href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">PWM</a>,servoPin).release())));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="namespace_r_s_l_html_aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f"><div class="ttname"><a href="namespace_r_s_l.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">RSL::PWM</a></div><div class="ttdoc">PWM. </div><div class="ttdef"><b>Definition:</b> GPIO.h:101</div></div>
+<div class="ttc" id="class_r_s_l__core_1_1_h_w_manager_html_ac7d745eeb225e64158a0daec532414e2"><div class="ttname"><a href="class_r_s_l__core_1_1_h_w_manager.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a></div><div class="ttdeci">static HWManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> HWManager.h:18</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a37e858662738ee58ad5a02b86ceb1e07"></a>
@@ -178,7 +185,7 @@ Klassendiagramm für RSL::Servo:</div>
 </table>
 </div><div class="memdoc">
 <p>deconstructor of servo object </p>
-
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// todo use interfaces for unregister servo</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// todo release pin stuff (set to default settings)</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
@@ -194,7 +201,7 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    servoPin-&gt;disablePWM();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8c7d52ea1d0cc9efdd064024043b505b"></a>
@@ -209,7 +216,7 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    servoPin-&gt;enablePWM();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5607f0593bbbd2e089b4d6d983b6bfe9"></a>
@@ -226,7 +233,7 @@ Klassendiagramm für RSL::Servo:</div>
       </table>
 </div><div class="memdoc">
 <p>get the current servo position </p><dl class="section return"><dt>Rückgabe</dt><dd>current servo position </dd></dl>
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> currentPosition;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa55f04bb66a8f55968eb1effa5f581a2"></a>
@@ -248,7 +255,7 @@ Klassendiagramm für RSL::Servo:</div>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    currentPosition = position;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// todo check for min max value</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    servoPin-&gt;setDuty(1000000 + (1000000 * position));</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.1</span>
+   &#160;<span id="projectnumber">v1.4</span>
    </div>
   </td>
  </tr>
@@ -97,15 +97,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> fuer Export- und Unexport-Funktionalitaet.  
+ <a href="class_r_s_l__core_1_1_g_p_i_o.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_g_p_i_o_8h_source.html">GPIO.h</a>&gt;</code></p>
 <div class="dynheader">
 Klassendiagramm für RSL_core::GPIO:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_r_s_l__core_1_1_g_p_i_o__inherit__graph.png" border="0" usemap="#_r_s_l__core_1_1_g_p_i_o_inherit__map" alt="Inheritance graph"/></div>
 <map name="_r_s_l__core_1_1_g_p_i_o_inherit__map" id="_r_s_l__core_1_1_g_p_i_o_inherit__map">
-<area shape="rect" id="node2" href="class_r_s_l_1_1_g_p_i_o___analog.html" title="RSL::GPIO_Analog" alt="" coords="5,80,141,107"/>
-<area shape="rect" id="node3" href="class_r_s_l_1_1_g_p_i_o___digital.html" title="RSL::GPIO_Digital" alt="" coords="165,80,299,107"/>
-<area shape="rect" id="node4" href="class_r_s_l_1_1_g_p_i_o___p_w_m.html" title="RSL::GPIO_PWM" alt="" coords="323,80,453,107"/>
+<area shape="rect" id="node2" href="class_r_s_l_1_1_g_p_i_o___analog.html" title="GPIO_Analog Klasse fuer Input Analogsignal an einen Pin. BeagleBone hat 7 Analogeingaenge. " alt="" coords="5,80,141,107"/>
+<area shape="rect" id="node3" href="class_r_s_l_1_1_g_p_i_o___digital.html" title="GPIO Digital Klasse fuer Input und Output Digitalsignal an einen Pin. " alt="" coords="165,80,299,107"/>
+<area shape="rect" id="node4" href="class_r_s_l_1_1_g_p_i_o___p_w_m.html" title="Eine Klasse zur Kontrolle PWM Output. " alt="" coords="323,80,453,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,7 +128,9 @@ Geschützte, statische Methoden</h2></td></tr>
 <tr class="memitem:af0d89659136403df05f2616d51466cc4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html#af0d89659136403df05f2616d51466cc4">unExportPin</a> (const <a class="el" href="namespace_r_s_l.html#a00e6d1cde3fded55d1b342398029fd08">RSL::GPIOPin</a> pin)</td></tr>
 <tr class="separator:af0d89659136403df05f2616d51466cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> fuer Export- und Unexport-Funktionalitaet. </p>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a class="anchor" id="ae96ae13f952c808013cb8c2e2725b7f6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +151,7 @@ Geschützte, statische Methoden</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        </div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
@@ -173,11 +178,11 @@ Geschützte, statische Methoden</h2></td></tr>
 </div><div class="memdoc">
 <p>GPIO-pin is exported in filesystem: "/sys/class/gpio/export/[pin]". </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GPIOPin</td><td>for export </td></tr>
+    <tr><td class="paramname">pin</td><td>for export </td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::fstream fileStream;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    fileStream.open(<span class="stringliteral">&quot;/sys/class/gpio/export&quot;</span>, std::fstream::out);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    fileStream &lt;&lt; pin;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    fileStream.close();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
@@ -210,7 +215,7 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html">GPIO</a> is initialized </p>
+<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> is initialized </p>
 
 <p>Implementiert in <a class="el" href="class_r_s_l_1_1_g_p_i_o___digital.html#afa3dbd01ed7422b85f6dea372ee0a089">RSL::GPIO_Digital</a>, <a class="el" href="class_r_s_l_1_1_g_p_i_o___p_w_m.html#ad18b0eb4530a23098aef91a0574f246c">RSL::GPIO_PWM</a> und <a class="el" href="class_r_s_l_1_1_g_p_i_o___analog.html#a02ddfe8f805eef65ba93084214c650de">RSL::GPIO_Analog</a>.</p>
 
@@ -236,7 +241,7 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html">GPIO</a> is finished </p>
+<p><a class="el" href="class_r_s_l__core_1_1_g_p_i_o.html" title="GPIO fuer Export- und Unexport-Funktionalitaet. ">GPIO</a> is finished </p>
 
 <p>Implementiert in <a class="el" href="class_r_s_l_1_1_g_p_i_o___digital.html#aa9adfed9d7db2c7a29fde7420a190fa9">RSL::GPIO_Digital</a>, <a class="el" href="class_r_s_l_1_1_g_p_i_o___p_w_m.html#a243b26f30db64be1c583a8c7f8c8c5da">RSL::GPIO_PWM</a> und <a class="el" href="class_r_s_l_1_1_g_p_i_o___analog.html#a90290a048b918d41ef53cdc0bf6e003d">RSL::GPIO_Analog</a>.</p>
 
@@ -265,11 +270,11 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 </div><div class="memdoc">
 <p>GPIO-pin is deleted in filesystem. </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GPIOPin</td><td>for unexport </td></tr>
+    <tr><td class="paramname">pin</td><td>for unexport </td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::fstream fileStream;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    fileStream.open(<span class="stringliteral">&quot;/sys/class/gpio/unexport&quot;</span>, std::fstream::out);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    fileStream &lt;&lt; pin;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    fileStream.close();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
