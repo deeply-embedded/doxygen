@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
     <ul class="tablist">
       <li><a href="index.html"><span>Hauptseite</span></a></li>
       <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
       <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -62,10 +62,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
-      <li><a href="classes.html"><span>Datenstruktur-Verzeichnis</span></a></li>
+      <li><a href="annotated.html"><span>Auflistung&#160;der&#160;Klassen</span></a></li>
+      <li><a href="classes.html"><span>Klassen-Verzeichnis</span></a></li>
       <li><a href="inherits.html"><span>Klassenhierarchie</span></a></li>
-      <li><a href="functions.html"><span>Datenstruktur-Elemente</span></a></li>
+      <li><a href="functions.html"><span>Klassen-Elemente</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
-<a href="#pro-static-methods">Geschützte, statische Methoden</a>  </div>
+<a href="#pro-static-methods">Geschützte, statische Methoden</a> &#124;
+<a href="a00094.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
 <div class="title">RSL_core::GPIO Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
@@ -103,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="dynheader">
 Klassendiagramm für RSL_core::GPIO:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00084.png" border="0" usemap="#_r_s_l__core_1_1_g_p_i_o_inherit__map" alt="Inheritance graph"/></div>
+<div class="center"><img src="a00095.png" border="0" usemap="#_r_s_l__core_1_1_g_p_i_o_inherit__map" alt="Inheritance graph"/></div>
 <map name="_r_s_l__core_1_1_g_p_i_o_inherit__map" id="_r_s_l__core_1_1_g_p_i_o_inherit__map">
 <area shape="rect" id="node2" href="a00003.html" title="GPIO_Analog Klasse fuer Input Analogsignal an einen Pin. BeagleBone hat 7 Analogeingaenge. " alt="" coords="5,80,141,107"/>
 <area shape="rect" id="node3" href="a00004.html" title="GPIO Digital Klasse fuer Input und Output Digitalsignal an einen Pin. " alt="" coords="165,80,299,107"/>
@@ -154,7 +155,7 @@ Geschützte, statische Methoden</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definiert in Zeile <a class="el" href="a00014_source.html#l00122">122</a> der Datei <a class="el" href="a00014_source.html">GPIO.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        </div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
@@ -187,7 +188,7 @@ Geschützte, statische Methoden</h2></td></tr>
 </dl>
 
 <p>Definiert in Zeile <a class="el" href="a00013_source.html#l00008">8</a> der Datei <a class="el" href="a00013_source.html">GPIO.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::fstream fileStream;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    fileStream.open(<span class="stringliteral">&quot;/sys/class/gpio/export&quot;</span>, std::fstream::out);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    fileStream &lt;&lt; pin;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    fileStream.close();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
@@ -281,7 +282,7 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 </dl>
 
 <p>Definiert in Zeile <a class="el" href="a00013_source.html#l00016">16</a> der Datei <a class="el" href="a00013_source.html">GPIO.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::fstream fileStream;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    fileStream.open(<span class="stringliteral">&quot;/sys/class/gpio/unexport&quot;</span>, std::fstream::out);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    fileStream &lt;&lt; pin;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    fileStream.close();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment -->
 <p><div class="dynheader">
 Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="dyncontent">
