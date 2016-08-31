@@ -1,3 +1,4 @@
-<map id="RSL::GPIO_PWM" name="RSL::GPIO_PWM">
-<area shape="rect" id="node2" href="$a00002.html" title="GPIO fuer Export&#45; und Unexport&#45;Funktionalitaet. " alt="" coords="9,5,131,32"/>
+<map id="RSL::Servo" name="RSL::Servo">
+<area shape="rect" id="node2" href="$a00001.html" title="Klasse Actor, sie ist die Basisklasse aller Akteure. " alt="" coords="17,80,104,107"/>
+<area shape="rect" id="node3" href="$a00009.html" title="Zuweisung GPIO Resource auf Periphery. " alt="" coords="5,5,116,32"/>
 </map>

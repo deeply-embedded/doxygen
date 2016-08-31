@@ -1,5 +1,2 @@
-<map id="src/periphery/actor/servo.cpp" name="src/periphery/actor/servo.cpp">
-<area shape="rect" id="node2" href="$a00014.html" title="../../GPIO.h" alt="" coords="176,169,267,196"/>
-<area shape="rect" id="node4" href="$a00020.html" title="../../GPIO_PWM.h" alt="" coords="60,95,191,121"/>
-<area shape="rect" id="node7" href="$a00022.html" title="../../HWManager.h" alt="" coords="275,95,405,121"/>
+<map id="src/periphery/sensor/switch.h" name="src/periphery/sensor/switch.h">
 </map>

@@ -1,4 +1,4 @@
-<map id="src/periphery/sensor/switch.h" name="src/periphery/sensor/switch.h">
-<area shape="rect" id="node2" href="$a00034.html" title="src/periphery/sensor\l/joystickDigital.h" alt="" coords="5,95,145,136"/>
-<area shape="rect" id="node3" href="$a00033.html" title="src/periphery/sensor\l/joystickDigital.cpp" alt="" coords="5,184,145,225"/>
+<map id="RSL::JoystickDigital" name="RSL::JoystickDigital">
+<area shape="rect" id="node2" href="$a00010.html" title="Eine Klasse zu lesen Sensordaten. " alt="" coords="28,80,125,107"/>
+<area shape="rect" id="node3" href="$a00009.html" title="Zuweisung GPIO Resource auf Periphery. " alt="" coords="21,5,132,32"/>
 </map>

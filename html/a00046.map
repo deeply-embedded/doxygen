@@ -1,4 +1,4 @@
-<map id="src/GPIO_Digital.cpp" name="src/GPIO_Digital.cpp">
-<area shape="rect" id="node2" href="$a00018.html" title="GPIO_Digital.h" alt="" coords="51,80,162,107"/>
-<area shape="rect" id="node4" href="$a00014.html" title="GPIO.h" alt="" coords="96,155,163,181"/>
+<map id="src/GPIO_PWM.cpp" name="src/GPIO_PWM.cpp">
+<area shape="rect" id="node2" href="$a00020.html" title="GPIO_PWM.h" alt="" coords="105,80,212,107"/>
+<area shape="rect" id="node3" href="$a00014.html" title="GPIO.h" alt="" coords="5,155,72,181"/>
 </map>

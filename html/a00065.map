@@ -1,5 +1,5 @@
-<map id="src/periphery/sensor.cpp" name="src/periphery/sensor.cpp">
-<area shape="rect" id="node2" href="$a00032.html" title="sensor.h" alt="" coords="99,80,171,107"/>
-<area shape="rect" id="node4" href="$a00022.html" title="../HWManager.h" alt="" coords="142,155,261,181"/>
-<area shape="rect" id="node5" href="$a00014.html" title="GPIO.h" alt="" coords="5,229,72,256"/>
+<map id="RSL::Actor" name="RSL::Actor">
+<area shape="rect" id="node3" href="$a00008.html" title="Konstruktor für die LED, die angegebene Pins werden registriert. " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" href="$a00011.html" title="Eine Klasse um Servos anzusteuern. " alt="" coords="112,155,203,181"/>
+<area shape="rect" id="node2" href="$a00009.html" title="Zuweisung GPIO Resource auf Periphery. " alt="" coords="46,5,157,32"/>
 </map>
