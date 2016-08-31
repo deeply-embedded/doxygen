@@ -1,8 +1,0 @@
-<map id="RSL::Periphery" name="RSL::Periphery">
-<area shape="rect" id="node2" href="$class_r_s_l_1_1_actor.html" title="RSL::Actor" alt="" coords="114,80,201,107"/>
-<area shape="rect" id="node5" href="$class_r_s_l_1_1_sensor.html" title="RSL::Sensor" alt="" coords="250,80,347,107"/>
-<area shape="rect" id="node3" href="$class_r_s_l_1_1_l_e_d.html" title="RSL::LED" alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node4" href="$class_r_s_l_1_1_servo.html" title="RSL::Servo" alt="" coords="112,155,203,181"/>
-<area shape="rect" id="node6" href="$class_r_s_l_1_1_joystick_digital.html" title="RSL::JoystickDigital" alt="" coords="227,155,370,181"/>
-<area shape="rect" id="node7" href="$class_r_s_l_1_1_switch.html" title="RSL::Switch" alt="" coords="395,155,491,181"/>
-</map>

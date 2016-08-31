@@ -1,0 +1,4 @@
+<map id="RSL::LED::off" name="RSL::LED::off">
+<area shape="rect" id="node2" href="$a00008.html#a78d446e44eda8060ecb270cd52206c2b" title="RSL::LED::LED" alt="" coords="163,5,279,32"/>
+<area shape="rect" id="node3" href="$a00008.html#a643ae67984b426fba7e7fd834e4e96dd" title="RSL::LED::toggle" alt="" coords="159,56,284,83"/>
+</map>

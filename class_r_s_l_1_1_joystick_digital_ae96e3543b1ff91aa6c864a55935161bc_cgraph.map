@@ -1,6 +1,0 @@
-<map id="RSL::JoystickDigital::initialize" name="RSL::JoystickDigital::initialize">
-<area shape="rect" id="node2" href="$class_r_s_l__core_1_1_h_w_manager.html#ac7d745eeb225e64158a0daec532414e2" title="RSL_core::HWManager\l::getInstance" alt="" coords="196,69,357,111"/>
-<area shape="rect" id="node3" href="$class_r_s_l__core_1_1_h_w_manager.html#a0ce62cb505b670fee916251bc990040e" title="RSL_core::HWManager\l::createGPIOResource" alt="" coords="405,5,567,47"/>
-<area shape="rect" id="node4" href="$class_r_s_l__core_1_1_h_w_manager.html#a1c843cc7c192faebed3b0f451a338bd2" title="RSL_core::HWManager\l::allocateGPIOPin" alt="" coords="405,71,567,112"/>
-<area shape="rect" id="node5" href="$class_r_s_l__core_1_1_h_w_manager.html#a77baec80f21fdb9e60eebcc97fce8875" title="RSL_core::HWManager\l::freeGPIOPin" alt="" coords="405,136,567,177"/>
-</map>

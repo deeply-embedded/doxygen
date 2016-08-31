@@ -1,5 +1,0 @@
-<map id="RSL_core::HWManager::getInstance" name="RSL_core::HWManager::getInstance">
-<area shape="rect" id="node2" href="$class_r_s_l__core_1_1_h_w_manager.html#a0ce62cb505b670fee916251bc990040e" title="RSL_core::HWManager\l::createGPIOResource" alt="" coords="215,5,376,47"/>
-<area shape="rect" id="node3" href="$class_r_s_l__core_1_1_h_w_manager.html#a1c843cc7c192faebed3b0f451a338bd2" title="RSL_core::HWManager\l::allocateGPIOPin" alt="" coords="215,71,376,112"/>
-<area shape="rect" id="node4" href="$class_r_s_l__core_1_1_h_w_manager.html#a77baec80f21fdb9e60eebcc97fce8875" title="RSL_core::HWManager\l::freeGPIOPin" alt="" coords="215,136,376,177"/>
-</map>
