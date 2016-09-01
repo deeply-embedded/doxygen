@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.4</span>
+   &#160;<span id="projectnumber">v1.5</span>
    </div>
   </td>
  </tr>
@@ -154,9 +154,9 @@ Klassendiagramm für RSL::Switch:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>constructor for single poled switches. registers the GPIOPin. </p><dl class="params"><dt>Parameter</dt><dd>
+<p>Konstruktor für einzelne gepolten Schalter. registriert die GPIOPin </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pin</td><td>the PIN used by the switch </td></tr>
+    <tr><td class="paramname">pin</td><td>: der Schalter verwendet den Pin. </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,7 +185,7 @@ Klassendiagramm für RSL::Switch:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>destructor that unregisters the GPIOPins </p>
+<p>Destructor, die die GPIOPins deregistriert </p>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00016">16</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="a00012.html#acf4a061efb64912948ad53f9d134d349">isInitialized</a>())</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        pin-&gt;shutdown();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="ttc" id="a00012_html_acf4a061efb64912948ad53f9d134d349"><div class="ttname"><a href="a00012.html#acf4a061efb64912948ad53f9d134d349">RSL::Switch::isInitialized</a></div><div class="ttdeci">bool isInitialized() const </div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00022">switch.cpp:22</a></div></div>
@@ -206,7 +206,7 @@ Klassendiagramm für RSL::Switch:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>initializes switch with GPIO pin </p><dl class="params"><dt>Parameter</dt><dd>
+<p>initialisiert Schalter mit GPIO-Pin </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">GPIOPin</td><td></td></tr>
   </table>
@@ -234,7 +234,7 @@ Klassendiagramm für RSL::Switch:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>check if pin has been initialized </p><dl class="section return"><dt>Rückgabe</dt><dd>true if pin has been assigned </dd></dl>
+<p>überprüfen, ob Pin initialisiert wurde </p><dl class="section return"><dt>Rückgabe</dt><dd>true : wenn der Pin zugeordnet wurde. </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00022">22</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> pin != <span class="keyword">nullptr</span>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div></div><!-- fragment -->
@@ -252,7 +252,7 @@ Klassendiagramm für RSL::Switch:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>get the active state of the switch. </p><dl class="section return"><dt>Rückgabe</dt><dd>true, if switch is in active state - false otherwise </dd></dl>
+<p>erhalten den aktiven Zustand des Schalters. </p><dl class="section return"><dt>Rückgabe</dt><dd>true : wenn Schalter in einem aktiven Zustand - andernfalls "false" </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00039">39</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">GPIO_Digital::State</a> pinValue = pin-&gt;getValue();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> (activeState) ? pinValue : !pinValue;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819da"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">RSL::GPIO_Digital::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00017">GPIO_Digital.h:17</a></div></div>
@@ -272,9 +272,9 @@ Klassendiagramm für RSL::Switch:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>set the active state of the switch to HIGH or LOW. </p><dl class="params"><dt>Parameter</dt><dd>
+<p>stellen den aktiven Zustand des Schalters auf HIGH oder LOW ein. </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td>the active gpio state </td></tr>
+    <tr><td class="paramname">state</td><td>: der aktiven Zustand wird eingegeben. </td></tr>
   </table>
   </dd>
 </dl>

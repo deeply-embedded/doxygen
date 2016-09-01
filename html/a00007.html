@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.4</span>
+   &#160;<span id="projectnumber">v1.5</span>
    </div>
   </td>
  </tr>
@@ -202,6 +202,7 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Konstruktor von <a class="el" href="a00007.html" title="KY-023 Joystick Modul (XY-Achsen) X und Y Position des Joysticks, werden als analoge Spannung auf den...">JoystickDigital</a> </p>
 
 <p>Definiert in Zeile <a class="el" href="a00033_source.html#l00007">7</a> der Datei <a class="el" href="a00033_source.html">joystickDigital.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;: pinX(<span class="keyword">nullptr</span>),pinY(<span class="keyword">nullptr</span>),switchObject(){</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment -->
@@ -227,6 +228,7 @@ Klassendiagramm für RSL::JoystickDigital:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Deconstructor von <a class="el" href="a00007.html" title="KY-023 Joystick Modul (XY-Achsen) X und Y Position des Joysticks, werden als analoge Spannung auf den...">JoystickDigital</a> </p>
 
 <p>Definiert in Zeile <a class="el" href="a00033_source.html#l00057">57</a> der Datei <a class="el" href="a00033_source.html">joystickDigital.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span>(pinX != <span class="keyword">nullptr</span>)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        pinX-&gt;shutdown();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>(pinY != <span class="keyword">nullptr</span>)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        pinY-&gt;shutdown();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div></div><!-- fragment -->
@@ -245,8 +247,7 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>which direction has the joystick</p>
-<dl class="section return"><dt>Rückgabe</dt><dd>the direction as an enum of Type JoystickDirection </dd></dl>
+<p>Welche Richtung hat den Joystick </p><dl class="section return"><dt>Rückgabe</dt><dd>JoystickDirection : Richtung als ENUM-Typ JoystickDirection </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00033_source.html#l00066">66</a> der Datei <a class="el" href="a00033_source.html">joystickDigital.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7d">JoystickDigital::JoystickDirection</a> result = <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7daa917c18a041599e0300838bd342a2452">UNKNOWN</a>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">switch</span> (pinX-&gt;getValue()) {</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">GPIO_Digital::HIGH</a>:</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">switch</span> (pinY-&gt;getValue()) {</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">GPIO_Digital::HIGH</a>:</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    result = <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7dac41e351bb5c76379e70e0f2157a589e5">SOUTH_EAST</a>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2">GPIO_Digital::LOW</a>:</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    result = <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7da18c7de4c091eea8c78e4f62a544d486d">NORTH_EAST</a>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2">GPIO_Digital::LOW</a>:</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">switch</span> (pinY-&gt;getValue()) {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">GPIO_Digital::HIGH</a>:</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    result = <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7da27c48b4d5da440a276c89a09b0e7d485">SOUTH_WEST</a>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2">GPIO_Digital::LOW</a>:</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    result = <a class="code" href="a00007.html#a2ad42b6426517897fa8d023424b1de7da5d8955791380183df4fcc7b19550c0d8">NORTH_WEST</a>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="ttc" id="a00007_html_a2ad42b6426517897fa8d023424b1de7da27c48b4d5da440a276c89a09b0e7d485"><div class="ttname"><a href="a00007.html#a2ad42b6426517897fa8d023424b1de7da27c48b4d5da440a276c89a09b0e7d485">RSL::JoystickDigital::SOUTH_WEST</a></div><div class="ttdef"><b>Definition:</b> <a href="a00034_source.html#l00024">joystickDigital.h:24</a></div></div>
@@ -272,6 +273,7 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Lesen der Schalter </p>
 
 <p>Definiert in Zeile <a class="el" href="a00033_source.html#l00017">17</a> der Datei <a class="el" href="a00033_source.html">joystickDigital.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> switchObject;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div></div><!-- fragment -->
@@ -300,10 +302,10 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>initializes joystick with x and y axis pins </p><dl class="params"><dt>Parameter</dt><dd>
+<p>initialisiert Joystick mit Achse pins x und y </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pinX_</td><td></td></tr>
-    <tr><td class="paramname">pinY_</td><td></td></tr>
+    <tr><td class="paramname">pinX_</td><td>: Achse Pin x </td></tr>
+    <tr><td class="paramname">pinY_</td><td>: Achse Pin y </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,11 +348,11 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>initializes joystick with x, y axis and switch pins </p><dl class="params"><dt>Parameter</dt><dd>
+<p>initialisiert Joystick mit x, y-Achse und der Schalter von Pin. </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pinX_</td><td></td></tr>
-    <tr><td class="paramname">pinY_</td><td></td></tr>
-    <tr><td class="paramname">pinSW_</td><td></td></tr>
+    <tr><td class="paramname">pinX_</td><td>: Achse Pin x </td></tr>
+    <tr><td class="paramname">pinY_</td><td>: Achse Pin y </td></tr>
+    <tr><td class="paramname">pinSW_</td><td>: der Schalter von Pin </td></tr>
   </table>
   </dd>
 </dl>
@@ -377,7 +379,7 @@ Klassendiagramm für RSL::JoystickDigital:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>check if pins has been initialized </p><dl class="section return"><dt>Rückgabe</dt><dd>true if pins have been assigned </dd></dl>
+<p>überprüfen, ob Pins initialisiert wurde </p><dl class="section return"><dt>Rückgabe</dt><dd>true : wenn Pins zugeordnet wurden </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00033_source.html#l00012">12</a> der Datei <a class="el" href="a00033_source.html">joystickDigital.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> ((pinX != <span class="keyword">nullptr</span>) &amp;&amp; (pinX != <span class="keyword">nullptr</span>));</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div></div><!-- fragment -->

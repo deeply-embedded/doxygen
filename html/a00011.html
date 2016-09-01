@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.4</span>
+   &#160;<span id="projectnumber">v1.5</span>
    </div>
   </td>
  </tr>
@@ -155,9 +155,9 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>constructor of servo object </p><dl class="params"><dt>Parameter</dt><dd>
+<p>Konstruktor von <a class="el" href="a00011.html" title="Eine Klasse um Servos anzusteuern. ">Servo</a> </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GPIOpin</td><td>used for servo </td></tr>
+    <tr><td class="paramname">GPIOpin</td><td>: Server verwendet die Pin </td></tr>
   </table>
   </dd>
 </dl>
@@ -188,7 +188,7 @@ Klassendiagramm für RSL::Servo:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>deconstructor of servo object </p>
+<p>Deconstructor des Servos </p>
 
 <p>Definiert in Zeile <a class="el" href="a00029_source.html#l00019">19</a> der Datei <a class="el" href="a00029_source.html">servo.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// todo use interfaces for unregister servo</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// todo release pin stuff (set to default settings)</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div></div><!-- fragment -->
@@ -207,6 +207,7 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p><a class="el" href="a00011.html" title="Eine Klasse um Servos anzusteuern. ">Servo</a> wird deaktiviert </p>
 
 <p>Definiert in Zeile <a class="el" href="a00029_source.html#l00043">43</a> der Datei <a class="el" href="a00029_source.html">servo.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    servoPin-&gt;disablePWM();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div></div><!-- fragment -->
@@ -224,6 +225,7 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p><a class="el" href="a00011.html" title="Eine Klasse um Servos anzusteuern. ">Servo</a> wird aktiviert </p>
 
 <p>Definiert in Zeile <a class="el" href="a00029_source.html#l00038">38</a> der Datei <a class="el" href="a00029_source.html">servo.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    servoPin-&gt;enablePWM();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div></div><!-- fragment -->
@@ -242,7 +244,7 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>get the current servo position </p><dl class="section return"><dt>Rückgabe</dt><dd>current servo position </dd></dl>
+<p>Lesen die aktuelle Servoposition </p><dl class="section return"><dt>Rückgabe</dt><dd>aktuelle Servoposition </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00029_source.html#l00025">25</a> der Datei <a class="el" href="a00029_source.html">servo.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> currentPosition;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div></div><!-- fragment -->
@@ -261,9 +263,9 @@ Klassendiagramm für RSL::Servo:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>set the servo position in degrees </p><dl class="params"><dt>Parameter</dt><dd>
+<p>die Servo-Position in Grad einstellen </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">double</td><td>position, desired position in degrees </td></tr>
+    <tr><td class="paramname">position</td><td>: die gewünschte Position in Grad. </td></tr>
   </table>
   </dd>
 </dl>
