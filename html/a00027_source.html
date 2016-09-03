@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Resylib C++11 with Doxygen: src/periphery/actor/LED.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Resylib C++11 with Doxygen
+   &#160;<span id="projectnumber">v1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e61159e6cb2180dca5ebb7a82eabc4ae.html">periphery</a></li><li class="navelem"><a class="el" href="dir_6e45c1d1426eca5ad8be9dcb1500ba5f.html">actor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LED.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00027.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00028.html">./LED.h</a>&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00037.html">RSL</a> {</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="a00008.html#a78d446e44eda8060ecb270cd52206c2b">    6</a></span>&#160;<a class="code" href="a00008.html#a78d446e44eda8060ecb270cd52206c2b">LED::LED</a>(<span class="keyword">const</span> <a class="code" href="a00037.html#a00e6d1cde3fded55d1b342398029fd08">GPIOPin</a> pin) </div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">//_gpio_d bekommt neu Instanz von Digital-Pin</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    _gpio_d = move(unique_ptr&lt;GPIO_Digital&gt;(static_cast&lt;GPIO_Digital*&gt;(<a class="code" href="a00006.html#ac7d745eeb225e64158a0daec532414e2">HWManager::getInstance</a>().createGPIOResource(<a class="code" href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">DIGITAL</a>,pin).release())));</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//Richtung-Ausgang wird angesetzt</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    _gpio_d-&gt;setDirection(<a class="code" href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501caac31419e08016122b7b2a0b8f91fbe24">RSL::OUTPUT</a>);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="a00008.html#a1fa052c398c7b5f5538e570bf646b034">off</a>(); <span class="comment">//LED ist Off beim Start</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00008.html#aec9a78b5b85a145017e8110a23646593">   18</a></span>&#160;<a class="code" href="a00008.html#aec9a78b5b85a145017e8110a23646593">LED::~LED</a>(<span class="keywordtype">void</span>) </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//TODO Unexport, die Pin beenden</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="a00008.html#ac8c070ab14560b5100801903f49d99d3">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00008.html#ac8c070ab14560b5100801903f49d99d3">LED::on</a>()</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//LED ist On</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    _gpio_d-&gt;setValue(<a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">RSL::GPIO_Digital::HIGH</a>);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    _isOn = <span class="keyword">true</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00008.html#a1fa052c398c7b5f5538e570bf646b034">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00008.html#a1fa052c398c7b5f5538e570bf646b034">LED::off</a>()</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//LED ist Off</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    _gpio_d-&gt;setValue(<a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2">RSL::GPIO_Digital::LOW</a>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    _isOn = <span class="keyword">false</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="a00008.html#a643ae67984b426fba7e7fd834e4e96dd">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00008.html#a643ae67984b426fba7e7fd834e4e96dd">LED::toggle</a>()</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (_isOn) {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="a00008.html#a1fa052c398c7b5f5538e570bf646b034">off</a>(); <span class="comment">//Wenn On, dann Off</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="a00008.html#ac8c070ab14560b5100801903f49d99d3">on</a>(); <span class="comment">//Wenn Off, dann On</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="ttc" id="a00008_html_aec9a78b5b85a145017e8110a23646593"><div class="ttname"><a href="a00008.html#aec9a78b5b85a145017e8110a23646593">RSL::LED::~LED</a></div><div class="ttdeci">~LED()</div><div class="ttdef"><b>Definition:</b> <a href="a00027_source.html#l00018">LED.cpp:18</a></div></div>
+<div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">RSL::GPIO_Digital::HIGH</a></div><div class="ttdoc">1 </div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00020">GPIO_Digital.h:20</a></div></div>
+<div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa17c957c11d36bc5dbc000f1e99eadba2">RSL::GPIO_Digital::LOW</a></div><div class="ttdoc">0 </div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00019">GPIO_Digital.h:19</a></div></div>
+<div class="ttc" id="a00008_html_a1fa052c398c7b5f5538e570bf646b034"><div class="ttname"><a href="a00008.html#a1fa052c398c7b5f5538e570bf646b034">RSL::LED::off</a></div><div class="ttdeci">void off()</div><div class="ttdef"><b>Definition:</b> <a href="a00027_source.html#l00033">LED.cpp:33</a></div></div>
+<div class="ttc" id="a00008_html_a643ae67984b426fba7e7fd834e4e96dd"><div class="ttname"><a href="a00008.html#a643ae67984b426fba7e7fd834e4e96dd">RSL::LED::toggle</a></div><div class="ttdeci">void toggle()</div><div class="ttdef"><b>Definition:</b> <a href="a00027_source.html#l00042">LED.cpp:42</a></div></div>
+<div class="ttc" id="a00008_html_ac8c070ab14560b5100801903f49d99d3"><div class="ttname"><a href="a00008.html#ac8c070ab14560b5100801903f49d99d3">RSL::LED::on</a></div><div class="ttdeci">void on()</div><div class="ttdef"><b>Definition:</b> <a href="a00027_source.html#l00024">LED.cpp:24</a></div></div>
+<div class="ttc" id="a00006_html_ac7d745eeb225e64158a0daec532414e2"><div class="ttname"><a href="a00006.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a></div><div class="ttdeci">static HWManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="a00022_source.html#l00018">HWManager.h:18</a></div></div>
+<div class="ttc" id="a00037_html"><div class="ttname"><a href="a00037.html">RSL</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00004">GPIO.h:4</a></div></div>
+<div class="ttc" id="a00008_html_a78d446e44eda8060ecb270cd52206c2b"><div class="ttname"><a href="a00008.html#a78d446e44eda8060ecb270cd52206c2b">RSL::LED::LED</a></div><div class="ttdeci">LED(const GPIOPin pin)</div><div class="ttdef"><b>Definition:</b> <a href="a00027_source.html#l00006">LED.cpp:6</a></div></div>
+<div class="ttc" id="a00037_html_a00e6d1cde3fded55d1b342398029fd08"><div class="ttname"><a href="a00037.html#a00e6d1cde3fded55d1b342398029fd08">RSL::GPIOPin</a></div><div class="ttdeci">GPIOPin</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00005">GPIO.h:5</a></div></div>
+<div class="ttc" id="a00037_html_a96c85e2adc8d2eb964e1cf7a430e501caac31419e08016122b7b2a0b8f91fbe24"><div class="ttname"><a href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501caac31419e08016122b7b2a0b8f91fbe24">RSL::OUTPUT</a></div><div class="ttdoc">Output. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00095">GPIO.h:95</a></div></div>
+<div class="ttc" id="a00037_html_aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d"><div class="ttname"><a href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">RSL::DIGITAL</a></div><div class="ttdoc">Digital. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00100">GPIO.h:100</a></div></div>
+<div class="ttc" id="a00028_html"><div class="ttname"><a href="a00028.html">LED.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
