@@ -1,9 +1,0 @@
-<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$a00009.html" title="Zuweisung von GPIO Resource auf Peripherie . " alt="" coords="5,81,116,108"/>
-<area shape="rect" id="node2" href="$a00001.html" title="Klasse Actor, sie ist die Basisklasse aller Akteure. " alt="" coords="169,56,256,83"/>
-<area shape="rect" id="node5" href="$a00010.html" title="Eine Klasse zu lesen Sensordaten. " alt="" coords="164,107,261,133"/>
-<area shape="rect" id="node3" href="$a00008.html" title="Konstruktor für die LED, die angegebene Pins werden registriert. " alt="" coords="339,5,422,32"/>
-<area shape="rect" id="node4" href="$a00011.html" title="Eine Klasse um Servos anzusteuern. " alt="" coords="335,56,426,83"/>
-<area shape="rect" id="node6" href="$a00007.html" title="KY&#45;023 Joystick Modul (XY&#45;Achsen) X und Y Position des Joysticks, werden als analoge Spannung auf den..." alt="" coords="309,107,452,133"/>
-<area shape="rect" id="node7" href="$a00012.html" title="Ein einpoliges Schalter, die angegebene Pins werden registriert. " alt="" coords="333,157,429,184"/>
-</map>
