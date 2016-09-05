@@ -1,0 +1,5 @@
+<map id="RSL::Sensor" name="RSL::Sensor">
+<area shape="rect" id="node3" href="$a00007.html" title="KY&#45;023 Joystick Modul (XY&#45;Achsen) X und Y Position des Joysticks, werden als analoge Spannung auf den..." alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$a00012.html" title="Ein einpoliges Schalter, die angegebene Pins werden registriert. " alt="" coords="173,155,269,181"/>
+<area shape="rect" id="node2" href="$a00009.html" title="Zuweisung von GPIO Resource auf Peripherie . " alt="" coords="93,5,204,32"/>
+</map>
