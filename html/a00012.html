@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.8</span>
+   &#160;<span id="projectnumber">v1.9</span>
    </div>
   </td>
  </tr>
@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div><!--header-->
 <div class="contents">
 
-<p>Ein einpoliges Schalter, die angegebene Pins werden registriert.  
+<p>Eine Klasse um einen einfachen Schalter zu betrieben.  
  <a href="a00012.html#details">Mehr ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="a00036_source.html">switch.h</a>&gt;</code></p>
@@ -138,9 +138,10 @@ Klassendiagramm für RSL::Switch:</div>
 <tr class="separator:aacb4238e81f71d53f47a2ccacd69acef inherit pub_methods_a00009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Ein einpoliges Schalter, die angegebene Pins werden registriert. </p>
+<div class="textblock"><p>Eine Klasse um einen einfachen Schalter zu betrieben. </p>
+<p>Ein <a class="el" href="a00012.html" title="Eine Klasse um einen einfachen Schalter zu betrieben. ">Switch</a> benutzt einen Input-Pin. </p>
 
-<p>Definiert in Zeile <a class="el" href="a00036_source.html#l00019">19</a> der Datei <a class="el" href="a00036_source.html">switch.h</a>.</p>
+<p>Definiert in Zeile <a class="el" href="a00036_source.html#l00022">22</a> der Datei <a class="el" href="a00036_source.html">switch.h</a>.</p>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a class="anchor" id="af9c70669dcc6f922699177320fe3b727"></a>
 <div class="memitem">
@@ -214,10 +215,10 @@ Klassendiagramm für RSL::Switch:</div>
 </dl>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00027">27</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="a00006.html">RSL_core::HWManager</a>&amp; hwManager = <a class="code" href="a00006.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pin = move(unique_ptr&lt;GPIO_Digital&gt;(static_cast&lt;GPIO_Digital*&gt;(hwManager.<a class="code" href="a00006.html#a0ce62cb505b670fee916251bc990040e">createGPIOResource</a>(<a class="code" href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">DIGITAL</a>,pin_).release())));</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span>(pin == <span class="keyword">nullptr</span>){</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//TODO: error handling and return / destroy self</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    pin-&gt;setDirection(<a class="code" href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61">INPUT</a>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="a00006_html"><div class="ttname"><a href="a00006.html">RSL_core::HWManager</a></div><div class="ttdoc">GPIO Hardware-Ressourcen zur Verfuegung zu stellen. </div><div class="ttdef"><b>Definition:</b> <a href="a00022_source.html#l00011">HWManager.h:11</a></div></div>
-<div class="ttc" id="a00037_html_a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61"><div class="ttname"><a href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61">RSL::INPUT</a></div><div class="ttdoc">Input. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00092">GPIO.h:92</a></div></div>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="a00006.html">RSL_core::HWManager</a>&amp; hwManager = <a class="code" href="a00006.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pin = move(unique_ptr&lt;GPIO_Digital&gt;(static_cast&lt;GPIO_Digital*&gt;(hwManager.<a class="code" href="a00006.html#a0ce62cb505b670fee916251bc990040e">createGPIOResource</a>(<a class="code" href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">DIGITAL</a>,pin_).release())));</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span>(pin == <span class="keyword">nullptr</span>){</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//TODO: error handling and return / destroy self</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    pin-&gt;setDirection(<a class="code" href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61">INPUT</a>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="a00006_html"><div class="ttname"><a href="a00006.html">RSL_core::HWManager</a></div><div class="ttdoc">Eine Klasse um Resource (PINs) zur Verfügung zu stellen. </div><div class="ttdef"><b>Definition:</b> <a href="a00022_source.html#l00011">HWManager.h:11</a></div></div>
+<div class="ttc" id="a00037_html_a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61"><div class="ttname"><a href="a00037.html#a96c85e2adc8d2eb964e1cf7a430e501cadccbfadc23310f59083257d83e377d61">RSL::INPUT</a></div><div class="ttdoc">Input. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00093">GPIO.h:93</a></div></div>
 <div class="ttc" id="a00006_html_ac7d745eeb225e64158a0daec532414e2"><div class="ttname"><a href="a00006.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a></div><div class="ttdeci">static HWManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="a00022_source.html#l00018">HWManager.h:18</a></div></div>
-<div class="ttc" id="a00037_html_aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d"><div class="ttname"><a href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">RSL::DIGITAL</a></div><div class="ttdoc">Digital. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00100">GPIO.h:100</a></div></div>
+<div class="ttc" id="a00037_html_aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d"><div class="ttname"><a href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6acf53ac4e7610c22dc3ea97f44d6c3a2d">RSL::DIGITAL</a></div><div class="ttdoc">Digital. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00101">GPIO.h:101</a></div></div>
 <div class="ttc" id="a00006_html_a0ce62cb505b670fee916251bc990040e"><div class="ttname"><a href="a00006.html#a0ce62cb505b670fee916251bc990040e">RSL_core::HWManager::createGPIOResource</a></div><div class="ttdeci">std::unique_ptr&lt; GPIO &gt; createGPIOResource(const RSL::GPIOType type, const RSL::GPIOPin pin)</div><div class="ttdef"><b>Definition:</b> <a href="a00021_source.html#l00015">HWManager.cpp:15</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -255,7 +256,7 @@ Klassendiagramm für RSL::Switch:</div>
 <p>erhalten den aktiven Zustand des Schalters. </p><dl class="section return"><dt>Rückgabe</dt><dd>true : wenn Schalter in einem aktiven Zustand - andernfalls "false" </dd></dl>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00039">39</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">GPIO_Digital::State</a> pinValue = pin-&gt;getValue();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> (activeState) ? pinValue : !pinValue;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819da"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">RSL::GPIO_Digital::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00017">GPIO_Digital.h:17</a></div></div>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">GPIO_Digital::State</a> pinValue = pin-&gt;getValue();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> (activeState) ? pinValue : !pinValue;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819da"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819da">RSL::GPIO_Digital::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00020">GPIO_Digital.h:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,7 +281,7 @@ Klassendiagramm für RSL::Switch:</div>
 </dl>
 
 <p>Definiert in Zeile <a class="el" href="a00035_source.html#l00045">45</a> der Datei <a class="el" href="a00035_source.html">switch.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    activeState = (state == <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">GPIO_Digital::HIGH</a>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">RSL::GPIO_Digital::HIGH</a></div><div class="ttdoc">1 </div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00020">GPIO_Digital.h:20</a></div></div>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    activeState = (state == <a class="code" href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">GPIO_Digital::HIGH</a>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="a00004_html_ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4"><div class="ttname"><a href="a00004.html#ab4633fc8ae2d34ba16ff6b476cc819daa2b42d3db2a4a3b4996708b661e055eb4">RSL::GPIO_Digital::HIGH</a></div><div class="ttdoc">1 </div><div class="ttdef"><b>Definition:</b> <a href="a00018_source.html#l00023">GPIO_Digital.h:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

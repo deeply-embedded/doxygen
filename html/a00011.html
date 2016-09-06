@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Resylib C++11 with Doxygen
-   &#160;<span id="projectnumber">v1.8</span>
+   &#160;<span id="projectnumber">v1.9</span>
    </div>
   </td>
  </tr>
@@ -105,7 +105,7 @@ Klassendiagramm für RSL::Servo:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00081.png" border="0" usemap="#_r_s_l_1_1_servo_inherit__map" alt="Inheritance graph"/></div>
 <map name="_r_s_l_1_1_servo_inherit__map" id="_r_s_l_1_1_servo_inherit__map">
-<area shape="rect" id="node2" href="a00001.html" title="Klasse Actor, sie ist die Basisklasse aller Akteure. " alt="" coords="17,80,104,107"/>
+<area shape="rect" id="node2" href="a00001.html" title="Eine Klasse zur Abbildung von Aktor&#45;Komponenten. " alt="" coords="17,80,104,107"/>
 <area shape="rect" id="node3" href="a00009.html" title="Zuweisung von GPIO Resource auf Peripherie . " alt="" coords="5,5,116,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
@@ -139,8 +139,9 @@ Klassendiagramm für RSL::Servo:</div>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>Eine Klasse um Servos anzusteuern. </p>
+<p>Die Ansteuerung des Servos geschieht durch ein PWM-Signal. Die Rotation wird über die Länge des Impulses gesteuert. PWM sendet wiederholende Signale in gleichmäßigen Abständen. Der Winkel des Motors wird über die Länge des Impulses bestimmt. </p>
 
-<p>Definiert in Zeile <a class="el" href="a00030_source.html#l00010">10</a> der Datei <a class="el" href="a00030_source.html">servo.h</a>.</p>
+<p>Definiert in Zeile <a class="el" href="a00030_source.html#l00016">16</a> der Datei <a class="el" href="a00030_source.html">servo.h</a>.</p>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a class="anchor" id="afd51c3aea9dadc4ea1976b5ecf412be9"></a>
 <div class="memitem">
@@ -157,13 +158,13 @@ Klassendiagramm für RSL::Servo:</div>
 </div><div class="memdoc">
 <p>Konstruktor von <a class="el" href="a00011.html" title="Eine Klasse um Servos anzusteuern. ">Servo</a> </p><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GPIOpin</td><td>: Server verwendet die Pin </td></tr>
+    <tr><td class="paramname">GPIOpin</td><td>: ServerPin zuweisen </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definiert in Zeile <a class="el" href="a00029_source.html#l00012">12</a> der Datei <a class="el" href="a00029_source.html">servo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    currentPosition = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//ServoPin wird nur ein Instanz von GPIO aus HWManager zugewiesen</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;servoPin = move(unique_ptr&lt;GPIO_PWM&gt;(static_cast&lt;GPIO_PWM*&gt;(<a class="code" href="a00006.html#ac7d745eeb225e64158a0daec532414e2">HWManager::getInstance</a>().createGPIOResource(<a class="code" href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">PWM</a>,servoPin).release())));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="a00037_html_aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f"><div class="ttname"><a href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">RSL::PWM</a></div><div class="ttdoc">PWM. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00101">GPIO.h:101</a></div></div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    currentPosition = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//ServoPin wird nur ein Instanz von GPIO aus HWManager zugewiesen</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;servoPin = move(unique_ptr&lt;GPIO_PWM&gt;(static_cast&lt;GPIO_PWM*&gt;(<a class="code" href="a00006.html#ac7d745eeb225e64158a0daec532414e2">HWManager::getInstance</a>().createGPIOResource(<a class="code" href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">PWM</a>,servoPin).release())));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="a00037_html_aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f"><div class="ttname"><a href="a00037.html#aa01b19e0e5956b7de4275d5fcffa02a6aebafcf857fc7b1ee780fd29594be9b5f">RSL::PWM</a></div><div class="ttdoc">PWM. </div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00102">GPIO.h:102</a></div></div>
 <div class="ttc" id="a00006_html_ac7d745eeb225e64158a0daec532414e2"><div class="ttname"><a href="a00006.html#ac7d745eeb225e64158a0daec532414e2">RSL_core::HWManager::getInstance</a></div><div class="ttdeci">static HWManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="a00022_source.html#l00018">HWManager.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
